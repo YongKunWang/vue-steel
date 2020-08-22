@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div1 {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            border: 1px solid red;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+        /*处于小图状态下的clip*/
+        #rectangular {
+            position: absolute;
+            top: -65px;
+            left: 0;
+            clip: rect(65px 300px 235px 0);
+        }
+
+    </style>
+</head>
+<body>
+<div class="div1">
+    <img id="rectangular" src="http://image.baosteel.com/img/10/10000.jpg"/>
+</div>
+
+</body>
+</html>

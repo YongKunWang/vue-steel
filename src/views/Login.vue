@@ -90,7 +90,7 @@ export default {
         const { data: res } = await this.$http.post('item/login', this.loginForm)
         // console.log(res)
         if (res.meta.status !== 1000) {
-          return this.$message.warning('登录失败')
+          return this.$message.warning(`${res.meta.msg},登录失败`)
         }
         this.$message.success('登录成功')
         // 这里需要添加一个token 后端是在最后实现的！

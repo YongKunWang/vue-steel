@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>img标签的做法</title>
+    <style>
+        .dotted-border {
+            border: dotted;
+            position: relative;
+            width: 536px;
+            height: 350px;
+        }
+
+        #top-left,
+        #middle,
+        #bottom-right {
+            position: absolute;
+            top: 0;
+        }
+
+        /*#top-left {*/
+        /*    left: 360px;*/
+        /*    clip: rect(0 175px 113px 0);*/
+        /*}*/
+        #top-left {
+            left: 360px;
+            clip: rect(0 100px 100px 0);
+        }
+        #top-left1 {
+            position: absolute;
+            top: 0;
+            left: 360px;
+            clip: rect(0 100px 100px 0);
+        }
+        #middle {
+            left: 280px;
+            clip: rect(119px 255px 229px 80px);
+        }
+
+        #bottom-right {
+            left: 200px;
+            /*之前的错误点在这个地方，不能加逗号*/
+            clip: rect(235px 335px 345px 160px);
+        }
+    </style>
+</head>
+<body>
+<h3>img标签的做法</h3>
+<p class="dotted-border">
+    <img src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Original graphic">
+    <img id="top-left" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to upper left">
+    <img id="middle" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped towards middle">
+    <img id="bottom-right" src="https://developer.mozilla.org/@api/deki/files/3613/=hut.jpg" title="Graphic clipped to bottom right">
+</p>
+
+</body>
+</html>

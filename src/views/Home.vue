@@ -191,7 +191,7 @@ export default {
   .el-main {
     width: 100%;
     height: 100%;
-    padding: 0;
+    padding: 10px 5px 0px;
     margin: 0;
   }
   .el-menu {
